@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import About from '../components/About.astro';
+import Resume from '../components/Resume.astro';
+import TechExperience from '../components/TechExperience.astro';
+import Github from '../components/icons/Github.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+posts.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).valueOf() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).valueOf() : 0;
+  return dateB - dateA;
+});
+---
+
+<BaseLayout>
+  <main class="p-8 max-w-5xl mx-auto">
+    <header>
+      <h1 class="text-4xl font-display dark:text-neutral-200">Andrew Monty</h1>
+    </header>
+
+    <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <section
+        class="flex lg:flex-col lg:justify-end rounded-xl bg-zinc-200 dark:bg-zinc-700"
+      >
+        <img
+          src="/assets/headshot.png"
+          alt="Photo of Andrew"
+          class="object-cover rounded-xl"
+        />
+      </section>
+
+      <section
+        class="p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
+      >
+        <About />
+      </section>
+
+      <section
+        class="p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
+      >
+        <Resume />
+      </section>
+
+      <div class="flex flex-col gap-6">
+        <section
+          class="flex-grow p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
+        >
+          <TechExperience />
+        </section>
+        <section
+          class="p-4 rounded-xl bg-gradient-to-br from-yellow-200 to-orange-300 overflow-hidden"
+        >
+          <div class="flex items-center gap-3">
+            <Github />
+            <span class="text-lg">Check me out on Github</span>
+          </div>
+          <a
+            href="https://github.com/AndrewMonty"
+            class="block mt-3 font-semibold hover:underline"
+          >
+            https://github.com/AndrewMonty
+          </a>
+        </section>
+      </div>
+      {
+        posts.map((post) => (
+          <section>
+            <a
+              href={`/blog/${post.slug}`}
+              class="group block p-4 rounded-xl border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
+            >
+              <div>
+                <p class="group-hover:underline group-focus:underline dark:text-white text-2xl font-bold">
+                  {post.data.title}
+                </p>
+                <p class="font-mono text-neutral-400">
+                  {post.data.date?.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </p>
+              </div>
+            </a>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>

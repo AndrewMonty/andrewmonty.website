@@ -1,0 +1,79 @@
+<div class="prose prose-neutral dark:prose-invert" x-data="{ expanded: false }">
+  <h2>Education</h2>
+
+  <h3>
+    <span class="font-mono">2009</span>
+    - Web Design Certificate @ MCC
+  </h3>
+  <p>
+    Learned basics of HTML, JavaScript <small>...and Macromedia Flash</small>
+  </p>
+  <h3>
+    <span class="font-mono">2008</span>
+    - Associates Degree in Graphic Design @ MCC
+  </h3>
+  <p>
+    Studied color theory, typography, print and package design. Learned how to
+    use Adobe Creative Suite tools.
+  </p>
+
+  <h2>Employment</h2>
+
+  <h3>
+    <span class="font-mono">2020 - 2024</span>
+    : Software Developer @ JLE Industries
+  </h3>
+  <p>
+    Converted a legacy PHP app to a modern Laravel stack. Built new features to
+    support operating a growing fleet of flatbed trucks. Maintain integrations
+    with third party software.
+  </p>
+
+  <h3>
+    <span class="font-mono">2016 - 2020</span>
+    : Web Developer @ NorAm International Partners, Inc.
+  </h3>
+  <p>
+    Built and maintained several web apps to support warehouse operations
+    processing millions of products from multiple customers.
+  </p>
+
+  <div x-show="expanded" x-collapse>
+    <h3>
+      <span class="font-mono">2012 - 2016</span>
+      : Data Analyst @ NorAm International Partners, Inc.
+    </h3>
+    <p>Managed automated and ad-hoc reporting on warehouse operations.</p>
+
+    <h3>
+      <span class="font-mono">2011 - 2012</span>
+      : Operations Consultant @ NorAm International Partners, Inc.
+    </h3>
+    <p>
+      Helped set-up operations and train new hires at new facilities in
+      Frankfurt Germany and Orleans France.
+    </p>
+
+    <h3>
+      <span class="font-mono">2011 - 2012</span>
+      : Trade-in Operations @ NorAm International Partners, Inc.
+    </h3>
+    <p>Inspected, graded, tracked, and packaged used textbooks for resale.</p>
+
+    <h3>
+      <span class="font-mono">2007 - 2008</span>
+      : Graphic Design Intern @ J.P. Sercel Associates
+    </h3>
+    <p>
+      Designed product catalog, banners, and other promotional material for
+      trade-shows.
+    </p>
+  </div>
+
+  <button
+    @click="expanded = !expanded"
+    x-text="expanded ? 'see less...' : 'see more...'"
+    class="text-gray-400 hover:underline"
+  >
+  </button>
+</div>

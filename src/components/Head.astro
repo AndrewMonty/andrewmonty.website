@@ -1,0 +1,42 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Andrew Monty',
+  description = 'Personal website for web designer/developer Andrew Monty.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="canonical" href={canonicalURL} />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Andrew Monty"
+    href="/rss.xml"
+  />
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+  ></script>
+</head>
