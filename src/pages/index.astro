@@ -1,92 +1,49 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import About from '../components/About.astro';
-import Resume from '../components/Resume.astro';
-import TechExperience from '../components/TechExperience.astro';
-import Github from '../components/icons/Github.astro';
-import { getCollection } from 'astro:content';
-
-const posts = await getCollection('blog', ({ data }) => !data.draft);
-posts.sort((a, b) => {
-  const dateA = a.data.date ? new Date(a.data.date).valueOf() : 0;
-  const dateB = b.data.date ? new Date(b.data.date).valueOf() : 0;
-  return dateB - dateA;
-});
 ---
 
 <BaseLayout>
-  <main class="p-8 max-w-5xl mx-auto">
-    <header>
-      <h1 class="text-4xl font-display dark:text-neutral-200">Andrew Monty</h1>
-    </header>
-
-    <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <section
-        class="flex lg:flex-col lg:justify-end rounded-xl bg-zinc-200 dark:bg-zinc-700"
-      >
-        <img
-          src="/assets/headshot.png"
-          alt="Photo of Andrew"
-          class="object-cover rounded-xl"
-        />
-      </section>
-
-      <section
-        class="p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
-      >
-        <About />
-      </section>
-
-      <section
-        class="p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
-      >
-        <Resume />
-      </section>
-
-      <div class="flex flex-col gap-6">
-        <section
-          class="flex-grow p-4 rounded-xl md:col-span-2 border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
-        >
-          <TechExperience />
-        </section>
-        <section
-          class="p-4 rounded-xl bg-gradient-to-br from-yellow-200 to-orange-300 overflow-hidden"
-        >
-          <div class="flex items-center gap-3">
-            <Github />
-            <span class="text-lg">Check me out on Github</span>
-          </div>
-          <a
-            href="https://github.com/AndrewMonty"
-            class="block mt-3 font-semibold hover:underline"
-          >
-            https://github.com/AndrewMonty
-          </a>
-        </section>
+  <main class="min-h-dvh p-8 max-w-2xl mx-auto flex flex-col justify-center">
+    <section
+      class="prose prose-lg prose-neutral dark:prose-invert prose-a:font-medium">
+      <div class="flex justify-between gap-2 flex-wrap">
+        <h1 class="text-4xl font-display dark:text-neutral-200">
+          Andrew Monty
+        </h1>
+        <div class="flex gap-3 flex-wrap">
+          <a href="/resume">Resumé</a>
+          <a href="/work">Work</a>
+          <a href="/gear">Gear</a>
+        </div>
       </div>
-      {
-        posts.map((post) => (
-          <section>
-            <a
-              href={`/blog/${post.slug}`}
-              class="group block p-4 rounded-xl border-2 border-zinc-200 dark:border-zinc-700 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700"
-            >
-              <div>
-                <p class="group-hover:underline group-focus:underline dark:text-white text-2xl font-bold">
-                  {post.data.title}
-                </p>
-                <p class="font-mono text-neutral-400">
-                  {post.data.date?.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
-                </p>
-              </div>
-            </a>
-          </section>
-        ))
-      }
-    </div>
+
+      <div class="flex items-center gap-2">
+        <span class="flex text-sm rounded-full border border-zinc-600">
+          <span class="px-2 py-0.5">designer</span>
+          <div class="w-px bg-zinc-600 inset-y-0 transform -skew-12"></div>
+          <span class="px-2 py-0.5">developer</span>
+          <div class="w-px bg-zinc-600 inset-y-0 transform -skew-12"></div>
+          <span class="px-2 py-0.5">devops</span>
+          <div class="w-px bg-zinc-600 inset-y-0 transform -skew-12"></div>
+          <a href="https://amplinks.app" class="px-2 py-0.5">@ Amplinks</a>
+        </span>
+      </div>
+      <p>
+        Started tinkering with the web by customizing my myspace page, and
+        somehow made a career of it! I love how open and approachable the web
+        is, it's so easy to get some pixels on a screen, but also incredibly
+        powerful!
+      </p>
+
+      <p>
+        In my free time I enjoy a good beer on a patio, getting lost in an
+        immersive rpg, and dogs! Gilly volunteers at the library and
+        <a
+          href="https://public.tableau.com/shared/XXKKT25DK?:display_count=y&:origin=viz_share_link&:embed=y">
+          competes in toss & fetch
+        </a>
+        .
+      </p>
+    </section>
   </main>
 </BaseLayout>

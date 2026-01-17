@@ -27,7 +27,7 @@
     {
         "name": "Laravel Livewire",
         "icon": "icons/livewire.svg",
-        "link": "https://laravel-livewire.com"
+        "link": "https://livewire.laravel.com"
     },
     {
         "name": "JavaScript",
@@ -67,11 +67,26 @@
     {
         "name": "GitHub",
         "icon": "icons/github.svg",
-        "link": "https://github.com"
+        "link": "https://github.com/AndrewMonty"
     },
         {
         "name": "Bitbucket",
         "icon": "icons/bitbucket.svg",
         "link": "https://bitbucket.org"
+    },
+    {
+        "name": "React",
+        "icon": "icons/react.svg",
+        "link": "https://react.dev"
+    },
+    {
+        "name": "Next.js",
+        "icon": "icons/nextjs.svg",
+        "link": "https://nextjs.org"
+    },
+    {
+        "name": "Firebase",
+        "icon": "icons/firebase.svg",
+        "link": "https://firebase.google.com"
     }
 ]

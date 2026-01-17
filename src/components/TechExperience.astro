@@ -16,6 +16,9 @@ import Docker from './icons/Docker.astro';
 import Git from './icons/Git.astro';
 import Github from './icons/Github.astro';
 import Bitbucket from './icons/Bitbucket.astro';
+import React from './icons/React.astro';
+import Nextjs from './icons/Nextjs.astro';
+import Firebase from './icons/Firebase.astro';
 
 const iconMap: Record<string, any> = {
   'icons/html5.svg': Html5,
@@ -33,13 +36,16 @@ const iconMap: Record<string, any> = {
   'icons/git.svg': Git,
   'icons/github.svg': Github,
   'icons/bitbucket.svg': Bitbucket,
+  'icons/react.svg': React,
+  'icons/nextjs.svg': Nextjs,
+  'icons/firebase.svg': Firebase,
 };
 ---
 
-<h2 class="text-2xl font-bold dark:text-white">Technical experience</h2>
-<p class="mt-2 italic text-right dark:text-neutral-300">in no particular order</p>
+<h2 class="text-lg font-mono">Technical experience</h2>
+<p class="italic text-right text-muted-foreground">in no particular order</p>
 
-<ul class="mt-4 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-4">
+<ul class="mt-4 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3">
   {
     technologies.map((technology) => {
       const IconComponent = iconMap[technology.icon];
@@ -47,10 +53,9 @@ const iconMap: Record<string, any> = {
         <li>
           <a
             href={technology.link}
-            class="group relative aspect-square rounded-lg p-2 flex flex-col items-center justify-center gap-2 bg-white/50 dark:bg-zinc-800/50 dark:text-white"
-          >
+            class="group relative aspect-square rounded-lg p-2 flex flex-col items-center justify-center gap-2">
             {IconComponent && <IconComponent />}
-            <div class="block absolute inset-0 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 opacity-0 hover:opacity-100 group-focus:opacity-100 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm transition-opacity">
+      <div class="block absolute inset-0 rounded-lg border-2 border-muted opacity-0 hover:opacity-100 group-focus:opacity-100 bg-white/80 dark:bg-neutral-950/70 backdrop-blur-sm transition-opacity">
               <div class="h-full flex flex-col items-center justify-center">
                 <span class="text-sm font-bold text-center">
                   {technology.name}
