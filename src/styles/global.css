@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+:root {
+    --background: var(--color-neutral-100);
+    --foreground: var(--color-neutral-950);
+    --muted: var(--color-neutral-300);
+    --muted-foreground: var(--color-neutral-400);
+    --accent: var(--color-orange-400);
+    --accent-foreground: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--color-neutral-900);
+        --foreground: var(--color-neutral-50);
+        --muted: var(--color-neutral-700);
+        --muted-foreground: var(--color-neutral-500);
+        --accent: var(--color-orange);
+        --accent-foreground: var(--color-neutral-900);
+    }
+}
+
+@theme inline {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Courier Prime", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}

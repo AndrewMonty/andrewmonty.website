@@ -1,11 +1,22 @@
 {
+  "name": "andrewmonty-website",
+  "type": "module",
   "scripts": {
-    "serve": "bundle exec jekyll serve --livereload"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.0",
+    "astro": "^5.16.9"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.2.6"
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.0",
+    "prettier": "^3.8.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.0.0"
   }
 }

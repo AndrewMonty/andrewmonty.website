@@ -1,0 +1,70 @@
+---
+import technologies from '../data/technologies.json';
+
+import Html5 from './icons/Html5.astro';
+import Css3 from './icons/Css3.astro';
+import Tailwindcss from './icons/Tailwindcss.astro';
+import Php from './icons/Php.astro';
+import Laravel from './icons/Laravel.astro';
+import Livewire from './icons/Livewire.astro';
+import Javascript from './icons/Javascript.astro';
+import Angular from './icons/Angular.astro';
+import Alpinejs from './icons/Alpinejs.astro';
+import Nodejs from './icons/Nodejs.astro';
+import Database from './icons/Database.astro';
+import Docker from './icons/Docker.astro';
+import Git from './icons/Git.astro';
+import Github from './icons/Github.astro';
+import Bitbucket from './icons/Bitbucket.astro';
+import React from './icons/React.astro';
+import Nextjs from './icons/Nextjs.astro';
+import Firebase from './icons/Firebase.astro';
+
+const iconMap: Record<string, any> = {
+  'icons/html5.svg': Html5,
+  'icons/css3.svg': Css3,
+  'icons/tailwindcss.svg': Tailwindcss,
+  'icons/php.svg': Php,
+  'icons/laravel.svg': Laravel,
+  'icons/livewire.svg': Livewire,
+  'icons/javascript.svg': Javascript,
+  'icons/angular.svg': Angular,
+  'icons/alpinejs.svg': Alpinejs,
+  'icons/nodejs.svg': Nodejs,
+  'icons/database.svg': Database,
+  'icons/docker.svg': Docker,
+  'icons/git.svg': Git,
+  'icons/github.svg': Github,
+  'icons/bitbucket.svg': Bitbucket,
+  'icons/react.svg': React,
+  'icons/nextjs.svg': Nextjs,
+  'icons/firebase.svg': Firebase,
+};
+---
+
+<h2 class="text-lg font-mono">Technical experience</h2>
+<p class="italic text-right text-muted-foreground">in no particular order</p>
+
+<ul class="mt-4 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3">
+  {
+    technologies.map((technology) => {
+      const IconComponent = iconMap[technology.icon];
+      return (
+        <li>
+          <a
+            href={technology.link}
+            class="group relative aspect-square rounded-lg p-2 flex flex-col items-center justify-center gap-2">
+            {IconComponent && <IconComponent />}
+      <div class="block absolute inset-0 rounded-lg border-2 border-muted opacity-0 hover:opacity-100 group-focus:opacity-100 bg-white/80 dark:bg-neutral-950/70 backdrop-blur-sm transition-opacity">
+              <div class="h-full flex flex-col items-center justify-center">
+                <span class="text-sm font-bold text-center">
+                  {technology.name}
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>

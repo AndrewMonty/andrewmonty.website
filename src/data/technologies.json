@@ -1,0 +1,92 @@
+[
+    {
+        "name": "HTML5",
+        "icon": "icons/html5.svg",
+        "link": "https://html.spec.whatwg.org/multipage/"
+    },
+    {
+        "name": "CSS3",
+        "icon": "icons/css3.svg",
+        "link": "https://www.w3.org/Style/CSS/"
+    },
+    {
+        "name": "Tailwind",
+        "icon": "icons/tailwindcss.svg",
+        "link": "https://tailwindcss.com"
+    },
+    {
+        "name": "PHP",
+        "icon": "icons/php.svg",
+        "link": "https://php.net"
+    },
+    {
+        "name": "Laravel",
+        "icon": "icons/laravel.svg",
+        "link": "https://laravel.com"
+    },
+    {
+        "name": "Laravel Livewire",
+        "icon": "icons/livewire.svg",
+        "link": "https://livewire.laravel.com"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "icons/javascript.svg",
+        "link": "https://developer.mozilla.org/en-US/docs/Glossary/JavaScript"
+    },
+    {
+        "name": "Angular",
+        "icon": "icons/angular.svg",
+        "link": "https://angular.io"
+    },
+    {
+        "name": "AlpineJS",
+        "icon": "icons/alpinejs.svg",
+        "link": "https://alpinejs.dev"
+    },
+    {
+        "name": "NodeJS",
+        "icon": "icons/nodejs.svg",
+        "link": "https://nodejs.org"
+    },
+    {
+        "name": "SQL",
+        "icon": "icons/database.svg",
+        "link": "https://www.iso.org/standard/63555.html"
+    },
+    {
+        "name": "Docker",
+        "icon": "icons/docker.svg",
+        "link": "https://www.docker.com"
+    },
+    {
+        "name": "Git",
+        "icon": "icons/git.svg",
+        "link": "https://git-scm.com/"
+    },
+    {
+        "name": "GitHub",
+        "icon": "icons/github.svg",
+        "link": "https://github.com/AndrewMonty"
+    },
+        {
+        "name": "Bitbucket",
+        "icon": "icons/bitbucket.svg",
+        "link": "https://bitbucket.org"
+    },
+    {
+        "name": "React",
+        "icon": "icons/react.svg",
+        "link": "https://react.dev"
+    },
+    {
+        "name": "Next.js",
+        "icon": "icons/nextjs.svg",
+        "link": "https://nextjs.org"
+    },
+    {
+        "name": "Firebase",
+        "icon": "icons/firebase.svg",
+        "link": "https://firebase.google.com"
+    }
+]

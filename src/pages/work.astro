@@ -1,0 +1,253 @@
+---
+import Badge from '@/components/Badge.astro';
+import Link from '@/components/icons/Link.astro';
+import Lightbox from '@/components/Lightbox.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Work - Andrew Monty">
+  <main class="p-8 mx-auto">
+    <article
+      class="mx-auto prose prose-natural dark:prose-invert [&_img]:rounded-lg [&_img]:border-2 [&_img]:border-muted [&_img]:cursor-zoom-in [&_h2]:font-display [&_h2]:font-semibold">
+      <h1 class="not-prose mb-8 text-2xl font-display dark:text-neutral-200">
+        <a href="/" class="font-bold hover:underline text-muted-foreground"
+          >Andrew Monty</a
+        >
+        <span class="font-mono text-muted">/</span>
+        Work
+      </h1>
+      <p>
+        A selection of web projects I've worked on, or am currently working on.
+      </p>
+
+      <h2>
+        <a
+          href="https://amplinks.app"
+          class="not-prose flex items-center gap-2 hover:underline">
+          amplinks.app
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      SaaS to run your service business (HVAC, plumbing, electrical, etc.) Started
+      by an HVAC contractor dissatisfied with other software options. I've been improving
+      design, performance, and adding <a href="https://amplinks.app/changelog"
+        >new features</a
+      >.
+      <img
+        src="/assets/amplinks.app.png"
+        class="mt-4"
+        onclick="openLightbox('/assets/amplinks.app.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>react</Badge>
+        <Badge>nextjs</Badge>
+        <Badge>firebase</Badge>
+        <Badge>tailwind</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://condensate.app"
+          class="not-prose flex items-center gap-2 hover:underline">
+          condensate.app
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        Companion app of sorts to Amplinks, experimenting with what an
+        AI-assisted HVAC diagnostic app would look like.
+      </p>
+      <p>
+        Learned a lot about programatically interacting with LLMs, nuances of
+        http streaming responses, and Progressive Web App compatibility.
+      </p>
+      <div
+        class="-mx-8 px-8 pl-18 overflow-x-auto lg:overflow-visible flex justify-evenly [&_img]:h-96 [&_img]:-ml-10 [&_img]:hover:z-10">
+        <img
+          src="/assets/condensate-1.png"
+          onclick="openLightbox('/assets/condensate-1.png')"
+        />
+        <img
+          src="/assets/condensate-2.png"
+          onclick="openLightbox('/assets/condensate-2.png')"
+          class="translate-y-3"
+        />
+        <img
+          src="/assets/condensate-3.png"
+          onclick="openLightbox('/assets/condensate-3.png')"
+        />
+        <img
+          src="/assets/condensate-4.png"
+          onclick="openLightbox('/assets/condensate-4.png')"
+          class="-translate-y-3"
+        />
+        <img
+          src="/assets/condensate-5.png"
+          onclick="openLightbox('/assets/condensate-5.png')"
+        />
+      </div>
+      <div class="flex gap-1 flex-wrap">
+        <Badge>php</Badge>
+        <Badge>laravel</Badge>
+        <Badge>livewire</Badge>
+        <Badge>neuronai</Badge>
+        <Badge>tailwind</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://andrewmonty.website"
+          class="not-prose flex items-center gap-2 hover:underline">
+          andrewmonty.website
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        He put the name of the thing in the thing... This is the only one I can
+        <a href="https://github.com/AndrewMonty/AndrewMonty.github.io">show source</a>
+        for.
+      </p>
+      <div class="relative h-100">
+        <iframe src="/" class="absolute rounded-lg border-2 border-muted transform origin-top-left scale-50 w-[200%] h-200"></iframe>
+      </div>
+      <div class="mt-6 flex gap-1 flex-wrap">
+        <Badge>astro</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>cloudflare pages</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://offbeatcanine.com"
+          class="not-prose flex items-center gap-2 hover:underline">
+          offbeatcanine.com
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        In an industry where everyone uses the same squarespace template or
+        wordpress theme, a custom website really stands out! Snappy performance,
+        simple navigation, responsive design, clear and readable content have
+        helped bring in a lot of new leads!
+      </p>
+      <img
+        src="/assets/offbeatcanine.com.png"
+        onclick="openLightbox('/assets/offbeatcanine.com.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>astro</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>netlify</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://levelupcaninenh.com"
+          class="not-prose flex items-center gap-2 hover:underline">
+          levelupcaninenh.com
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        Blogging on a budget. A git based CMS helps this trainer manage content
+        themselves, without having to write markdown, and keeping the simplicity
+        of a static site.
+      </p>
+      <img
+        src="/assets/levelupcaninenh.com.png"
+        onclick="openLightbox('/assets/levelupcaninenh.com.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>astro</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>netlify</Badge>
+        <Badge>pagescms</Badge>
+      </div>
+
+      <hr />
+
+      <h2>JLE Industries</h2>
+      <p>
+        Sadly no longer in service, one of my last projects at JLE was putting a
+        fresh coat of paint on the website 💅
+      </p>
+      <img
+        src="/assets/jleindustries.com.png"
+        onclick="openLightbox('/assets/jleindustries.com.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>php</Badge>
+        <Badge>laravel</Badge>
+        <Badge>livewire</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>aws</Badge>
+        <Badge>mysql</Badge>
+      </div>
+
+      <hr />
+
+      <h2>DriverOS</h2>
+      <p>
+        Tired of dealing with clunky old desktop software, we built a custom web
+        app to interface with industry standard transportation management
+        software. The timeline view was the killer feature of DriverOS, allowing
+        dispatchers intuitive insight into the status of their whole fleet.
+      </p>
+      <img
+        src="/assets/driver-os.png"
+        onclick="openLightbox('/assets/driver-os.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>php</Badge>
+        <Badge>laravel</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>livewire</Badge>
+        <Badge>aws</Badge>
+        <Badge>mysql</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://cambridgefcu.com"
+          class="not-prose flex items-center gap-2 hover:underline">
+          cambridgefcu.com
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        I think this was my first freelance project, the design is a bit dated,
+        but if it ain't broke, don't fix it! It's still serving the customer
+        well.
+      </p>
+      <img
+        src="/assets/cambridgefcu.com.png"
+        onclick="openLightbox('/assets/cambridgefcu.com.png')"
+      />
+      <div class="flex gap-1 flex-wrap">
+        <Badge>html</Badge>
+        <Badge>css</Badge>
+        <Badge>cloudcannon</Badge>
+      </div>
+
+      <hr />
+
+      <div class="flex justify-center">
+        <button
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+          class="font-semibold hover:underline">&uarr; top</button
+        >
+      </div>
+    </article>
+  </main>
+  <Lightbox />
+</BaseLayout>

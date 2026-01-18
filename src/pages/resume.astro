@@ -1,0 +1,112 @@
+---
+import TechExperience from '@/components/TechExperience.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Resume - Andrew Monty">
+  <main class="p-8 max-w-4xl mx-auto">
+    <h1 class="mb-8 text-2xl font-display dark:text-neutral-200">
+      <a href="/" class="font-bold hover:underline text-muted-foreground">Andrew Monty</a>
+      <span class="font-mono text-muted">/</span>
+      Resumé
+    </h1>
+    <div class="flex flex-col sm:flex-row gap-12 items-start">
+      <section class="prose prose-neutral dark:prose-invert ">
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2024 <span class="text-muted-foreground">=&gt;</span> Amplinks
+        </h3>
+        <p>
+          Improving and adding new features to a SaaS app for managing service
+          business (HVAC, Plumbing, Etc.). Working on everything from new
+          marketing pages to CI/CD pipelines.
+        </p>
+        <ul>
+          <li>Fixed data integrity/security issues</li>
+          <li>Custom logo design and branding</li>
+          <li>Redesigned website and application UI</li>
+          <li>Increased page load speeds dramatically</li>
+          <li>Improved accessibility</li>
+        </ul>
+
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2020 <span class="text-muted-foreground">=&gt;</span> JLE Industries
+        </h3>
+        <p>
+          Converted a legacy PHP app to a modern Laravel stack. Built new
+          features to support operating a growing fleet of flatbed trucks.
+        </p>
+        <ul>
+          <li>
+            Created timeline view to make sense of a mess of data from decades
+            old systems
+          </li>
+          <li>
+            Built mobile-optimized features for drivers to view assigned jobs,
+            request new loads, and communicate with dispatch
+          </li>
+          <li>
+            Overhauled public website with a fresh design and built-in
+            publishing system.
+          </li>
+        </ul>
+
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2010
+          <span class="text-muted-foreground">=&gt;</span>
+          NorAm International
+        </h3>
+        <p>
+          Started in the warehouse inspecting, grading, and packaging used
+          textbooks, DVDs, video games, and consumer electronics for resale.
+          Helped set-up operations and train new hires at new facilities in
+          Germany and France.
+        </p>
+        <p>
+          Learned a lot of SQL, and cut my teeth on PHP and Laravel to
+          contribute to a small team building and maintaining in-house web apps.
+          Built some really cool things from inventory management tools to order
+          ingestion APIs. Favorite project was working on a rudimentary SSO
+          system for users to log in to multiple separate Laravel apps with one
+          login, using JWT as an identity token.
+        </p>
+
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2009
+          <span class="text-muted-foreground">=&gt;</span>
+          Manchester Community College
+        </h3>
+        <p>
+          Completed Web Design Certificate. Learned basics of HTML, JavaScript
+          <small class="text-muted-foreground"
+            >&hellip; and Macromedia Flash</small
+          >
+        </p>
+
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2009
+          <span class="text-muted-foreground">=&gt;</span>
+          Manchester Community College
+        </h3>
+        <p>
+          Completed Associates Degree in Graphic Design. Studied color theory,
+          typography, print and package design. Learned how to use Adobe
+          Creative Suite tools.
+        </p>
+
+        <h3 class="sticky top-0 mb-0 py-2.5 bg-background font-mono text-base">
+          2008
+          <span class="text-muted-foreground">=&gt;</span>
+          J.P. Sercel Associates
+        </h3>
+        <p>
+          Completed an internship where I Designed product catalog, banners, and
+          other promotional material for trade-shows.
+        </p>
+      </section>
+      <section
+        class="min-w-xs p-4 rounded border-2 border-muted">
+        <TechExperience />
+      </section>
+    </div>
+  </main>
+</BaseLayout>

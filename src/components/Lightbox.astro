@@ -1,0 +1,41 @@
+---
+// Lightbox component for zooming images
+---
+
+<div
+  x-data="{ open: false, src: '' }"
+  @lightbox.window="open = true; src = $event.detail.src"
+  @keydown.escape.window="open = false">
+  <!-- Backdrop -->
+  <div
+    x-show="open"
+    x-transition.opacity
+    @click="open = false"
+    class="fixed inset-0 bg-black/80 z-50 cursor-zoom-out"
+    style="display: none;">
+  </div>
+
+  <!-- Image -->
+  <div
+    x-show="open"
+    x-transition
+    @click="open = false"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 cursor-zoom-out"
+    style="display: none;">
+    <img
+      :src="src"
+      class="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+      alt=""
+    />
+  </div>
+</div>
+
+<script is:inline>
+  function openLightbox(src) {
+    window.dispatchEvent(
+      new CustomEvent('lightbox', {
+        detail: { src },
+      })
+    );
+  }
+</script>
