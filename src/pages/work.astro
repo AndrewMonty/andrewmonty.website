@@ -10,7 +10,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
     <article
       class="mx-auto prose prose-natural dark:prose-invert [&_img]:rounded-lg [&_img]:border-2 [&_img]:border-muted [&_img]:cursor-zoom-in [&_h2]:font-display [&_h2]:font-semibold">
       <h1 class="not-prose mb-8 text-2xl font-display dark:text-neutral-200">
-        <a href="/" class="font-bold hover:underline text-muted-foreground">Andrew Monty</a>
+        <a href="/" class="font-bold hover:underline text-muted-foreground"
+          >Andrew Monty</a
+        >
         <span class="font-mono text-muted">/</span>
         Work
       </h1>
@@ -92,6 +94,30 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
         <Badge>livewire</Badge>
         <Badge>neuronai</Badge>
         <Badge>tailwind</Badge>
+      </div>
+
+      <hr />
+
+      <h2>
+        <a
+          href="https://andrewmonty.website"
+          class="not-prose flex items-center gap-2 hover:underline">
+          andrewmonty.website
+          <Link class="text-muted-foreground" />
+        </a>
+      </h2>
+      <p>
+        He put the name of the thing in the thing... This is the only one I can
+        <a href="https://github.com/AndrewMonty/AndrewMonty.github.io">show source</a>
+        for.
+      </p>
+      <div class="relative h-100">
+        <iframe src="/" class="absolute rounded-lg border-2 border-muted transform origin-top-left scale-50 w-[200%] h-200"></iframe>
+      </div>
+      <div class="mt-6 flex gap-1 flex-wrap">
+        <Badge>astro</Badge>
+        <Badge>tailwind</Badge>
+        <Badge>cloudflare pages</Badge>
       </div>
 
       <hr />
