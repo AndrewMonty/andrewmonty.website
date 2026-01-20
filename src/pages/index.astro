@@ -51,13 +51,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .
       </p>
     </section>
-    <section class="mt-12 flex flex-col items-center justify-center gap-2">
+    <section class="group mt-12 flex flex-col items-center justify-center gap-2">
       here from WorkOS? checkout
       <a
         href="https://workos.andrewmonty.website"
         class="px-4 py-1 rounded-full border border-muted">
         workos.andrewmonty.website
       </a>
+      <aside class="text-muted-foreground transition-opacity opacity-0 group-hover:opacity-100">
+        might take a minute to cold-start ⏳
+      </aside>
     </section>
   </main>
 </BaseLayout>
